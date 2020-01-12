@@ -2,4 +2,14 @@
 
 <!-- <app-open-close></app-open-close> -->
 <!-- <app-status-slider></app-status-slider> -->
-<app-hero-list-page></app-hero-list-page>
+<!-- <app-hero-list-page></app-hero-list-page> -->
+
+<nav>
+  <a id="home" routerLink="/home" routerLinkActive="active">Home</a>
+  <br>
+  <a id="about" routerLink="/about" routerLinkActive="active">About</a>
+</nav>
+
+<div [@routeAnimations]="prepareRoute(outlet)" >
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

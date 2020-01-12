@@ -7,18 +7,28 @@ import { AppComponent } from './app.component';
 import { OpenCloseComponent } from './open-close/open-close.component';
 import { StatusSliderComponent } from './status-slider/status-slider.component';
 import { HeroListPageComponent } from './hero-list-page/hero-list-page.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     OpenCloseComponent,
     StatusSliderComponent,
-    HeroListPageComponent
+    HeroListPageComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      { path: '', pathMatch: 'full', redirectTo: '' },
+      { path: 'home', component: HomeComponent, data: {animation: 'HomePage'} },
+      { path: 'about', component: AboutComponent, data: {animation: 'AboutPage'} }
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
