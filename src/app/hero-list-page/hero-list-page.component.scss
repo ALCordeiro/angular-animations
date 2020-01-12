@@ -1,0 +1,39 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.active {
+  background-color: #cfd8dc;
+  transform: scale(1.1);
+}
+.inactive {
+  background-color: #eee;
+  transform: scale(1);
+}
+
+.badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: center;
+  margin-right: .8em;
+}
